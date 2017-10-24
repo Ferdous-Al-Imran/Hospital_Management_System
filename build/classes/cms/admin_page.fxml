@@ -1,0 +1,1355 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1200.0" style="-fx-background-color: #85F486;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cms.Admin_pageController">
+   <children>
+      <VBox alignment="TOP_CENTER" maxWidth="250.0" prefHeight="400.0" prefWidth="51.0" HBox.hgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../images/admin.png" />
+               </image>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </ImageView>
+            <Label text="Admin" textFill="#0427d7">
+               <font>
+                  <Font name="System Bold" size="25.0" />
+               </font>
+               <VBox.margin>
+                  <Insets top="20.0" />
+               </VBox.margin>
+            </Label>
+            <ColorPicker opacity="0.0" />
+         </children>
+         <HBox.margin>
+            <Insets />
+         </HBox.margin>
+      </VBox>
+      <VBox prefHeight="400.0" prefWidth="456.0" HBox.hgrow="ALWAYS">
+         <children>
+            <VBox alignment="CENTER" maxHeight="100.0" prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Label text="Clinic Management System" textFill="#118f8f">
+                     <font>
+                        <Font name="System Bold" size="46.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <VBox alignment="CENTER" prefHeight="424.0" prefWidth="440.0" VBox.vgrow="ALWAYS">
+               <children>
+                  <Accordion nodeOrientation="LEFT_TO_RIGHT" VBox.vgrow="ALWAYS">
+                     <padding>
+                        <Insets right="80.0" />
+                     </padding>
+                     <panes>
+                        <TitledPane style="-fx-animated: true; -fx-background-color: C7B6F3;" text="Tests">
+                           <content>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #C6F5F5;" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab text="Todays Tests">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="250.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                               <children>
+                                                                  <Label text="Test Name    ">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Label>
+                                                                  <TextField fx:id="test_test_name" maxWidth="120.0" HBox.hgrow="NEVER" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                               <children>
+                                                                  <Label text="Patient Name">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Label>
+                                                                  <TextField fx:id="test_patient_name" maxWidth="120.0" HBox.hgrow="NEVER" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                               <children>
+                                                                  <Label text="Test Date      ">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Label>
+                                                                  <DatePicker fx:id="test_test_date" maxWidth="120.0" />
+                                                               </children>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                               <children>
+                                                                  <Label text="Delivery Date">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Label>
+                                                                  <DatePicker fx:id="test_delivery_date" maxWidth="120.0" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox layoutX="778.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" />
+                                                            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                               <children>
+                                                                  <Label text="Doctor Name">
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </Label>
+                                                                  <TextField fx:id="test_doctor_name" maxWidth="120.0" HBox.hgrow="NEVER" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox layoutX="778.0" layoutY="10.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="10.0" />
+                                                            <HBox alignment="CENTER" layoutX="10.0" layoutY="10.0" prefHeight="100.0" prefWidth="200.0" spacing="10.0">
+                                                               <children>
+                                                                  <Button fx:id="test_search_button" mnemonicParsing="false" onAction="#test_search_button_clicked" text="Search" />
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <VBox prefHeight="212.0" prefWidth="868.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <TableView fx:id="todays_test_table" editable="true" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+                                                        <columns>
+                                                          <TableColumn fx:id="test_no_col" minWidth="50.0" prefWidth="75.0" text="No" />
+                                                          <TableColumn fx:id="test_name_col" minWidth="120.0" prefWidth="120.0" text="Test Name" />
+                                                            <TableColumn fx:id="test_patient_name_col" minWidth="120.0" prefWidth="120.0" text="Patient Name" />
+                                                            <TableColumn fx:id="test_date_col" minWidth="90.0" prefWidth="90.0" text="Test Date" />
+                                                            <TableColumn fx:id="test_delivery_date_col" minWidth="120.0" prefWidth="120.0" text="Delivery Date" />
+                                                            <TableColumn fx:id="test_expense_col" minWidth="100.0" prefWidth="100.0" text="Expenses" />
+                                                            <TableColumn fx:id="test_doctor_name_col" minWidth="120.0" prefWidth="120.0" text="Doctor Name" />
+                                                        </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </content></Tab>
+                                 </tabs>
+                              </TabPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane text="Patient">
+                           <content>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #C6F5F5;" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab text="Patient List">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label text="Patient Name" />
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <TextField fx:id="search_patient_name_textbox" maxWidth="150.0" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label text="Test Name   " />
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <TextField fx:id="search_patient_test_name" maxWidth="150.0" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                               <children>
+                                                                  <VBox alignment="CENTER">
+                                                                     <children>
+                                                                        <Label text="Doctor Name" />
+                                                                     </children>
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER">
+                                                                     <children>
+                                                                        <TextField fx:id="search_patient_doctor_name" maxWidth="150.0" />
+                                                                     </children>
+                                                                     <HBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </HBox.margin>
+                                                                  </VBox>
+                                                               </children>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <Button fx:id="search_patient_button_id" mnemonicParsing="false" onAction="#search_patient_button_clicked" text="Search" HBox.hgrow="NEVER" />
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="patient_list_table" editable="true" fixedCellSize="25.0" prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                   <columns>
+                                                      <TableColumn fx:id="patient_list_patient_name_col" minWidth="120.0" prefWidth="120.0" text="Patient Name" />
+                                                      <TableColumn fx:id="patient_list_age_col" editable="false" minWidth="60.0" prefWidth="60.0" text="Age" />
+                                                      <TableColumn fx:id="patient_list_sex_col" minWidth="70.0" prefWidth="70.0" text="Sex" />
+                                                      <TableColumn fx:id="patient_list_blood_group" minWidth="105.0" prefWidth="105.0" text="Blood Group" />
+                                                      <TableColumn fx:id="patient_list_marital_status" prefWidth="128.0" text="Marital Status" />
+                                                      <TableColumn fx:id="patient_list_weight_col" minWidth="68.0" prefWidth="68.0" text="Weight" />
+                                                      <TableColumn fx:id="patient_list_height_col" minWidth="70.0" prefWidth="70.0" text="Height" />
+                                                      <TableColumn fx:id="patient_list_bmi_col" minWidth="70.0" prefWidth="70.0" text="BMI" />
+                                                      <TableColumn fx:id="patient_list_address_col" minWidth="150.0" prefWidth="150.0" text="Address" />
+                                                      <TableColumn fx:id="patient_list_birth_date_col" prefWidth="179.0" text="Birth Date" />
+                                                      <TableColumn fx:id="patient_list_mobile_no_col" prefWidth="179.0" text="Mobile No" />
+                                                      <TableColumn fx:id="patient_list_occupation_col" prefWidth="179.0" text="Occupation" />
+                                                      <TableColumn fx:id="patient_list_ward_col" prefWidth="79.0" text="Ward No" />
+                                                      <TableColumn fx:id="patient_list_admit_date_col" prefWidth="179.0" text="Admit Date" />
+                                                      <TableColumn fx:id="patient_list_release_date_col" prefWidth="43.0" text="Release Date" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane text="Doctor">
+                           <content>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab text="Doctors List">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: #C6F5F5;">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label text="Doctors Name" />
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <TextField fx:id="search_doctor_name_textbox" maxWidth="150.0" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" />
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" />
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <Button fx:id="search_doctor_button" mnemonicParsing="false" onAction="#search_doctor_button_clicked" text="Search" HBox.hgrow="NEVER" />
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <TableView fx:id="doctor_list_table" editable="true" fixedCellSize="25.0" prefHeight="200.0" prefWidth="200.0" tableMenuButtonVisible="true" VBox.vgrow="ALWAYS">
+                                                   <columns>
+                                                      <TableColumn fx:id="doctor_list_no_col" prefWidth="43.0" text="No" />
+                                                      <TableColumn fx:id="doctor_list_doctor_name_col" prefWidth="179.0" text="Doctor Name" />
+                                                      <TableColumn fx:id="doctor_list_doctor_sex_col" prefWidth="79.0" text="Sex" />
+                                                      <TableColumn fx:id="doctor_list_doctor_age_col" prefWidth="79.0" text="Age" />
+                                                      <TableColumn fx:id="doctor_list_department_col" prefWidth="179.0" text="Department" />
+                                                      <TableColumn fx:id="doctor_list_designation_col" prefWidth="43.0" text="Designation" />
+                                                      <TableColumn fx:id="doctor_list_address_col" prefWidth="79.0" text="Address" />
+                                                      <TableColumn fx:id="doctor_list_salary_col" prefWidth="79.0" text="Salary" />
+                                                      <TableColumn fx:id="doctor_list_dob_col" prefWidth="179.0" text="Date of Birth" />
+                                                      <TableColumn fx:id="doctor_list_mob_col" prefWidth="43.0" text="Mobile No" />
+                                                      <TableColumn fx:id="doctor_list_appointment_fee_col" prefWidth="79.0" text="Appointment Fee" />
+                                                      <TableColumn fx:id="doctor_list_room_no_col" prefWidth="179.0" text="Room No" />
+                                                      <TableColumn fx:id="doctor_list_working_state" prefWidth="179.0" text="Working State" />
+                                                   </columns>
+                                                   <effect>
+                                                      <InnerShadow height="0.0" radius="0.0" width="0.0" />
+                                                   </effect>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="New Doctor">
+                                       <content>
+                                          <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #94C1BE;">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="new_doctor_name" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Age">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="new_doctor_age" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Sex">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="new_doctor_sex" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Date of Birth">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <DatePicker fx:id="new_doctor_date_of_birth" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Department">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="new_doctor_department" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Designation">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="new_doctor_designation" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Address">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextArea fx:id="new_doctor_address" maxHeight="50.0" maxWidth="150.0" prefHeight="200.0" prefWidth="80.0" VBox.vgrow="NEVER" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Mob. No.">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="new_doctor_mob_no" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Salary">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children></VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="new_doctor_salary" />
+                                                               </children></VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Education">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextArea fx:id="new_doctor_education" maxHeight="50.0" maxWidth="150.0" prefHeight="200.0" prefWidth="80.0" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Room No">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="new_doctor_room_no" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Appointment Fee">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField fx:id="new_doctor_appointment_fee" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" maxWidth="200.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <Button fx:id="new_doctor_save_button" mnemonicParsing="false" onAction="#new_doctor_save_button" text="Save" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane text="Nurse">
+                           <content>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab text="Nurse List">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label text="Doctors Name" />
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <TextField maxWidth="150.0" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" />
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" />
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" text="Search" HBox.hgrow="NEVER" />
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                   <columns>
+                                                      <TableColumn prefWidth="43.0" text="No" />
+                                                      <TableColumn prefWidth="179.0" text="Patient Name" />
+                                                      <TableColumn prefWidth="79.0" text="Age" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="New Nurse">
+                                       <content>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Age">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Sex">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <ComboBox prefWidth="150.0" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Date of Birth">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Department">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Designation">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Address">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextArea maxHeight="50.0" maxWidth="150.0" prefHeight="200.0" prefWidth="80.0" VBox.vgrow="NEVER" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Mob. No.">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Education">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextArea maxHeight="50.0" maxWidth="150.0" prefHeight="200.0" prefWidth="80.0" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Room No">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Age">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" maxWidth="200.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <Button mnemonicParsing="false" text="Save" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane text="Receptionist">
+                           <content>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab text="Receptionist List">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <Label text="Doctors Name" />
+                                                                     </children>
+                                                                  </VBox>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS">
+                                                                     <children>
+                                                                        <TextField maxWidth="150.0" />
+                                                                     </children>
+                                                                  </VBox>
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" />
+                                                                  <VBox alignment="CENTER" HBox.hgrow="ALWAYS" />
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                      <VBox alignment="CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                         <children>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                               <children>
+                                                                  <Button mnemonicParsing="false" text="Search" HBox.hgrow="NEVER" />
+                                                               </children>
+                                                               <opaqueInsets>
+                                                                  <Insets />
+                                                               </opaqueInsets>
+                                                            </HBox>
+                                                         </children>
+                                                      </VBox>
+                                                   </children>
+                                                </HBox>
+                                                <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                   <columns>
+                                                      <TableColumn prefWidth="43.0" text="No" />
+                                                      <TableColumn prefWidth="179.0" text="Patient Name" />
+                                                      <TableColumn prefWidth="79.0" text="Age" />
+                                                   </columns>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="New Reception">
+                                       <content>
+                                          <HBox prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Name">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Age">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Sex">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <ComboBox prefWidth="150.0" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Date of Birth">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Department">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Designation">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Address">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextArea maxHeight="50.0" maxWidth="150.0" prefHeight="200.0" prefWidth="80.0" VBox.vgrow="NEVER" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Mob. No.">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Education">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextArea maxHeight="50.0" maxWidth="150.0" prefHeight="200.0" prefWidth="80.0" />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Room No">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                         <children>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <Label text="Age">
+                                                                     <VBox.margin>
+                                                                        <Insets left="20.0" />
+                                                                     </VBox.margin>
+                                                                  </Label>
+                                                               </children>
+                                                            </VBox>
+                                                            <VBox alignment="CENTER_LEFT" nodeOrientation="LEFT_TO_RIGHT" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                               <children>
+                                                                  <TextField />
+                                                               </children>
+                                                            </VBox>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                                <VBox alignment="TOP_CENTER" maxWidth="200.0" prefHeight="200.0" prefWidth="100.0" HBox.hgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                                         </children>
+                                                      </HBox>
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                                      <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <children>
+                                                            <Button mnemonicParsing="false" text="Save" />
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </content>
+                        </TitledPane>
+                        <TitledPane text="Duty Shifts">
+                           <content>
+                              <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+                                 <tabs>
+                                    <Tab text="Todays Shifts">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                                <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                  <columns>
+                                                    <TableColumn minWidth="120.0" prefWidth="120.0" text="C1" />
+                                                    <TableColumn minWidth="120.0" prefWidth="120.0" text="C2" />
+                                                      <TableColumn minWidth="120.0" prefWidth="120.0" text="C2" />
+                                                      <TableColumn minWidth="120.0" prefWidth="120.0" text="C1" />
+                                                      <TableColumn minWidth="120.0" prefWidth="120.0" text="C2" />
+                                                      <TableColumn minWidth="120.0" prefWidth="120.0" text="C1" />
+                                                      <TableColumn minWidth="120.0" prefWidth="120.0" text="C2" />
+                                                      <TableColumn minWidth="120.0" prefWidth="120.0" text="C1" />
+                                                  </columns>
+                                                </TableView>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                    <Tab text="Tomorrows Shifts">
+                                       <content>
+                                          <VBox prefHeight="200.0" prefWidth="100.0">
+                                             <children>
+                                                <VBox prefHeight="200.0" prefWidth="100.0" VBox.vgrow="ALWAYS">
+                                                   <children>
+                                                      <HBox prefHeight="100.0" prefWidth="200.0" VBox.vgrow="ALWAYS" />
+                                                      <TableView prefHeight="200.0" prefWidth="200.0" VBox.vgrow="ALWAYS">
+                                                         <columns>
+                                                            <TableColumn minWidth="120.0" prefWidth="120.0" text="C1" />
+                                                            <TableColumn minWidth="120.0" prefWidth="120.0" text="C2" />
+                                                            <TableColumn minWidth="120.0" prefWidth="120.0" text="C2" />
+                                                            <TableColumn minWidth="120.0" prefWidth="120.0" text="C1" />
+                                                            <TableColumn minWidth="120.0" prefWidth="120.0" text="C2" />
+                                                            <TableColumn minWidth="120.0" prefWidth="120.0" text="C1" />
+                                                            <TableColumn minWidth="120.0" prefWidth="120.0" text="C2" />
+                                                            <TableColumn minWidth="120.0" prefWidth="120.0" text="C1" />
+                                                         </columns>
+                                                      </TableView>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </VBox>
+                                       </content>
+                                    </Tab>
+                                 </tabs>
+                              </TabPane>
+                           </content>
+                        </TitledPane>
+                     </panes>
+                  </Accordion>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</HBox>
